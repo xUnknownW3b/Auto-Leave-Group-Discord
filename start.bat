@@ -1,1 +1,1 @@
-npm i && node index.js
+python selfbot.py
