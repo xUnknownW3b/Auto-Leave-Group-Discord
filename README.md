@@ -12,25 +12,29 @@
 
 ## Overview
 
-This repository contains a simple Discord bot script written in JavaScript using the `discord.js-selfbot-v13` library. The bot's purpose is to automatically delete group direct messages (DMs) in Discord servers. It periodically checks for group DMs and removes them while sending a predefined message to notify users. Configuration options such as the bot's token and the message to send are stored in a separate `config.js` file for easy customization.
+> [!NOTE]
+> This repository contains a simple Discord bot script written in JavaScript using the `discord.js-selfbot-v13` library. The bot's purpose is to automatically delete group direct messages (DMs) in Discord servers. It periodically checks for group DMs and removes them while sending a predefined message to notify users. Configuration options such as the bot's token and the message to send are stored in a separate `config.js` file for easy customization.
 
 ## Features
 
-- **Deletes group DMs automatically.**
-- **Sends a customizable message before deletion.**
-- **Easy configuration via the `config.js` file.**
+> [!TIP]
+> - **Deletes group DMs automatically.**
+> - **Sends a customizable message before deletion.**
+> - **Easy configuration via the `config.js` file.**
 
 ## Usage
 
-1. **Clone** the repository to your local machine.
-2. **Install dependencies** by running `npm install` in the project directory.
-3. **Set up** the bot token and message in the `config.js` file.
-4. **Run** the bot using the command `node index.js` in the project directory.
+> [!IMPORTANT]
+> 1. **Clone** the repository to your local machine.
+> 2. **Install dependencies** by running `npm install` in the project directory.
+> 3. **Set up** the bot token and message in the `config.js` file.
+> 4. **Run** the bot using the command `node index.js` in the project directory.
 
 ## Requirements
 
-- Node.js
-- `discord.js-selfbot-v13` library
+> [!CAUTION]
+> - Node.js
+> - `discord.js-selfbot-v13` library
 
 ## Contributing
 
