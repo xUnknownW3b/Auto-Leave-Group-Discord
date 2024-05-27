@@ -1,1 +1,1 @@
-python selfbot.py
+python main.py
