@@ -1,23 +1,27 @@
-const { Client } = require('discord.js-selfbot-v13');
-const client = new Client();
+import discord
+from config import TOKEN, MESSAGE
 
-const token = "your token";     // Met ton token ici le sang
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print(f'Logged in as {self.user}')
+        self.check_channels.start()
 
-client.on('ready', async () => {
-    console.log(`Logged in as ${client.user.tag}`);
-    setInterval(async () => {
-        client.channels.cache.forEach(async (channel) => {
-            if (channel.type == 'GROUP_DM') {
-                try {
-                    await channel.send('❌ pas de groupe sans ma permission ! ❌');
-                    await channel.delete();
-                
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-        });
-    }, 2000);
-});
+    async def on_message(self, message):
+        # Ignore messages from the bot itself
+        if message.author == self.user:
+            return
 
-client.login(token);
+    async def check_channels(self):
+        await self.wait_until_ready()
+        while not self.is_closed():
+            for channel in self.private_channels:
+                if isinstance(channel, discord.GroupChannel):
+                    try:
+                        await channel.send(MESSAGE)
+                        await channel.delete()
+                    except Exception as e:
+                        print(f'Error deleting channel {channel.name}: {e}')
+            await asyncio.sleep(2)
+
+client = MyClient()
+client.run(TOKEN)
