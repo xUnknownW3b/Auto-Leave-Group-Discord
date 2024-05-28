@@ -1,1 +1,2 @@
-npm install discord.js-selfbot-v13 --save
+discord.py==1.7.3
+asyncio
