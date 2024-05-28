@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    # Discord Group DM Deleter Bot
+    # Discord Auto Group Leaver
     <br>
 <h1>
 
@@ -10,31 +10,31 @@
     </a>
 </p>
 
+
 ## Overview
 
 > [!NOTE]
-> This repository contains a simple Discord bot script written in JavaScript using the `discord.js-selfbot-v13` library. The bot's purpose is to automatically delete group direct messages (DMs) in Discord servers. It periodically checks for group DMs and removes them while sending a predefined message to notify users. Configuration options such as the bot's token and the message to send are stored in a separate `config.js` file for easy customization.
+> This repository contains a simple Discord bot script written in Python using the `discord.py` library. The bot's purpose is to automatically leave group direct messages (DMs) in Discord. It checks for group DMs and exits them while sending a predefined farewell message. Configuration options such as the bot's token and the message to send are directly set in the script for easy customization.
 
 ## Features
 
 > [!TIP]
-> - **Deletes group DMs automatically.**
-> - **Sends a customizable message before deletion.**
-> - **Easy configuration via the `config.js` file.**
+> - **Automatically leaves group DMs.**
+> - **Sends a customizable farewell message before leaving.**
+> - **Easy configuration directly in the script.**
 
 ## Usage
 
 > [!IMPORTANT]
 > 1. **Clone** the repository to your local machine.
-> 2. **Install dependencies** by running `npm install` in the project directory.
-> 3. **Set up** the bot token and message in the `config.js` file.
-> 4. **Run** the bot using the command `node index.js` in the project directory.
+> 2. **Set up** the bot token and message in the script file.
+> 3. **Run** the bot using the command `python your_script.py`.
 
 ## Requirements
 
 > [!CAUTION]
-> - Node.js
-> - `discord.js-selfbot-v13` library
+> - Python 3.6 or higher
+> - `discord.py` library (version 1.7.3 or lower)
 
 ## Contributing
 
